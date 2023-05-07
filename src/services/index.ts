@@ -22,9 +22,11 @@ export class NotesStorage {
     createNote (body: TNoteDTO) {
         const currentNotes = this.getAllNotes();
         const newId = Date.now().toString();
+        const newDate = new Date().toString()
         const note = {
             ...body,
-            id: newId
+            id: newId,
+            date: newDate
         }
         const notes: TNote[] = [
             ...currentNotes,

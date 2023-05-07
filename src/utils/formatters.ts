@@ -5,3 +5,10 @@ export const formatDescription = (description: string) => {
     const formattedDescription = `${arrayDescription.slice(0, 160).join(" ")}...`
     return formattedDescription
 }
+
+export const formatDate = (date: string) => {
+    const localDate = new Date(date).toLocaleDateString()
+    const dateArray = localDate.split("/").map((item) => +item > 10 ? item : `0${item}`)
+    const formattedDate = dateArray.join("/")
+    return formattedDate
+}

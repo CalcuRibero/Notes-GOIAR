@@ -9,6 +9,7 @@ export type TNoteDTO = {
     title: string;
     typeOfnote: string;
     description: string;
+    date: string;
 }
 
 export type TNote = TNoteDTO & {id: string}

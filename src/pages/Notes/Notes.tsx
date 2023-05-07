@@ -3,6 +3,7 @@ import { NotesStorage } from "../../services"
 import { TNote } from "../../utils/types"
 import { NoteCard } from "../../components/NoteCard"
 
+
 export const Notes = () => {
     const [notes, setNotes] = useState<TNote[]>([])
     
@@ -20,7 +21,7 @@ export const Notes = () => {
                 notes.map((note: TNote) => <NoteCard note={note} />)
                 : 
                 <article className="w-full flex justify-center align-middle lg:col-span-3">
-                    <h2 className="text-xl"> 
+                    <h2 className="text-3xl font-bold"> 
                         No hay notas guardadadas por el momento...
                     </h2>
                 </article>

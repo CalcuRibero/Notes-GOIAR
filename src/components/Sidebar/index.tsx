@@ -9,21 +9,21 @@ export const Sidebar = ({className = ""}: {className?: string}) => {
     return(
         <>
             <nav className={`bg-yellow-300 text-lg shadow-inner min-h-screen w-full ${className}`}>
-                <ul className="flex flex-col justify-start items-start px-2">
+                <ul className="flex flex-col justify-start items-start pt-4">
                     <Link to="/" className="w-full">
-                        <li className="hover:border-b hover:border-black hover:bg-yellow-500 w-full py-2 flex align-middle">
+                        <li className="hover:bg-yellow-400 w-full py-2 flex align-middle">
                             <BsFillHouseDoorFill/>
                             <span>Home</span>
                         </li>
                     </Link>
                     <Link to="/notes" className="w-full">
-                        <li className="hover:border-b hover:border-black hover:bg-yellow-500 w-full py-2 flex align-middle">
+                        <li className="hover:bg-yellow-400 w-full py-2 flex align-middle">
                                 <GrNotes />
                                 <span>Notes</span>
                         </li>
                     </Link>
                     <Link to="/about" className="w-full">
-                        <li className="hover:border-b hover:border-black hover:bg-yellow-500 w-full py-2 flex align-middle">
+                        <li className="hover:bg-yellow-400 w-full py-2 flex align-middle">
                                 <MdNotes />
                                 <span>Acerca de</span>
                         </li>
