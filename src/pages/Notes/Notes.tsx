@@ -20,7 +20,7 @@ export const Notes = () => {
                 notes.map((note: TNote) => <NoteCard note={note} />)
                 : 
                 <article className="w-full flex justify-center align-middle lg:col-span-3">
-                    <h2 className="text-xl text-blue-600"> 
+                    <h2 className="text-xl"> 
                         No hay notas guardadadas por el momento...
                     </h2>
                 </article>

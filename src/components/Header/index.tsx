@@ -1,11 +1,11 @@
 export const Header = () => {
     return (
-        <header className="text-xl flex justify-end bg-gray-300 px-2 py-2">
+        <header className="text-xl flex justify-end bg-yellow-400 px-2 py-2">
             <h1 className="grid grid-cols-2 gap-1">
-                <span className="text-green-600">
+                <span>
                     Notes 
                 </span>
-                <span className="text-purple-800">
+                <span>
                     GOIAR
                 </span>
                 </h1>
