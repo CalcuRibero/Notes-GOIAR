@@ -2,6 +2,7 @@ import { RiDeleteBin6Line } from "react-icons/ri"
 
 import { TNote } from "../../utils/types";
 import { NotesStorage } from "../../services";
+import { formatDescription } from "../../utils/formatters";
 
 type TProps = {
     note: TNote
@@ -18,7 +19,7 @@ export const NoteCard = ({note}: TProps) => {
 
     return (
         <article 
-            className="w-full grid grid-rows-3 gap-2 justify-center bg-yellow-400 p-2 h-96"
+            className="w-full grid grid-rows-6 gap-2 justify-center bg-yellow-400 p-2 h-108"
         >
             <h2 className="w-full flex justify-center text-lg font-bold">
                 {note.title}
@@ -26,9 +27,11 @@ export const NoteCard = ({note}: TProps) => {
             <p className="w-full flex justify-center text-lg">
                 {note.typeOfnote}
             </p>
-            <p className="w-full flex justify-start px-2 border-gray-800">
-                {note.description}
-            </p>
+            <div className="w-full border-y border-black  row-span-3">
+                <p className="w-full flex justify-start text-xs px-2 text-ellipsis">
+                    {`Descripción: ${formatDescription(note.description)}`}
+                </p>
+            </div>
             <button className="bg-transparent border border-black hover:bg-yellow-500 font-bold rounded-full transition-all duration-300 shadow-xl text-2xl flex align-middle w-44 mx-auto"
             onClick={handleEliminate}
             >

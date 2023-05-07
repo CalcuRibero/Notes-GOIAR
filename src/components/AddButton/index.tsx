@@ -9,7 +9,7 @@ export const AddButton = () => {
     } 
     return (
         <button 
-            className="bg-yellow-400 hover:bg-yellow-500 font-bold py-2 px-2 rounded-full transition-all duration-300 fixed bottom-6 right-12 z-20 shadow-xl text-2xl flex align-middle" 
+            className="bg-yellow-400 hover:bg-yellow-500 font-bold py-2 px-2 rounded-full transition-all duration-300 fixed bottom-6 right-12 z-20 shadow-xl text-2xl flex align-middle border border-black" 
             onClick={handleButton}
         >
             <span className="flex flex-col justify-center">

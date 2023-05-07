@@ -15,7 +15,7 @@ export const Notes = () => {
     , [])
 
     return (
-        <section className="p-4 grid grid-cols-1 lg:grid-cols-3 gap-2">
+        <section className="p-4 grid grid-cols-1 lg:grid-cols-2 gap-2">
             {notes.length ? 
                 notes.map((note: TNote) => <NoteCard note={note} />)
                 : 
