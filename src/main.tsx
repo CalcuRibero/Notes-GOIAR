@@ -6,8 +6,10 @@ import {
 } from "react-router-dom"
 
 import './index.css'
-import { Root } from './routes/root'
+import { AddNotes } from './pages/Notes/AddNotes'
 import { ErrorRoute } from './pages/error'
+import { Notes } from './pages/Notes/Notes'
+import { Root } from './routes/root'
 
 const router = createBrowserRouter([
   {
@@ -17,11 +19,15 @@ const router = createBrowserRouter([
       children: [
         {
             path: "/notes",
-            element: <>Notes</>
+            element: <Notes/>
         },
         {
             path: "/about",
             element: <>Acerca de</>
+        },
+        {
+          path: "/create-note",
+          element: <AddNotes />
         }
       ]
   },

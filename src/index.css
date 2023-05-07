@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*:focus-visible {
+    outline: none;
+}
+
+input, textarea {
+    padding: auto .25rem ;
+}
