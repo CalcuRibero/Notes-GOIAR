@@ -9,8 +9,16 @@ export type TNoteDTO = {
     title: string;
     typeOfnote: string;
     description: string;
-    date: string;
 }
 
-export type TNote = TNoteDTO & {id: string}
+export type TNote = TNoteDTO & {
+    date: string;
+    id: string;
+}
+
+export type TNoteFilter = {
+    title: string;
+    typeOfnote: string;
+    date: string;
+}
 

@@ -12,3 +12,8 @@ export const formatDate = (date: string) => {
     const formattedDate = dateArray.join("/")
     return formattedDate
 }
+
+export const formatParamsDate = (date:string) => {
+    const currentDate = new Date(date).toLocaleDateString()
+    return currentDate
+}

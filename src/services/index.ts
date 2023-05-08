@@ -1,4 +1,4 @@
-import { TNote, TNoteDTO } from "../utils/types"; 
+import { TNote, TNoteDTO, TNoteFilter } from "../utils/types"; 
 
 export class NotesStorage {
     storage: Storage;
@@ -7,9 +7,14 @@ export class NotesStorage {
         this.storage = localStorage;
     }
     
-    getAllNotes (): TNote[] {
+    getAllNotes (params?: TNoteFilter): TNote[] {
         const notes: TNote[] = JSON.parse(this.storage.getItem("Notes") || "[]")
-        return notes
+        if (!params) return notes
+        const filteredNotes = notes.filter((note: TNote) => 
+            note.title === params.title 
+        )
+        return filteredNotes
+
     }
 
     getOneNoteById (id: string): TNote {
